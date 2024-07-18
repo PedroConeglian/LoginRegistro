@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+body {
+    background-image: url(./imagens/Fundo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.fundo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110vh;
+    background: rgba(39, 39, 39, 0.4);
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(39, 39, 39, 0.7), transparent);
+    z-index: 100;
+}
+
+.nav-logo {
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.nav-menu ul {
+    display: flex;
+}
+
+.nav-menu ul li {
+    list-style-type: none;
+}
+
+.nav-menu ul li .link {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
+
+.link:hover,
+.active {
+    border-bottom: 2px solid white;
+}
+
+.nav-button .btn {
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#RegistroBtn {
+    margin-left: 15px;
+}
+
+.btn.branco-btn {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.btn.branco-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.nav-menu-btn {
+    display: none;
+}
+
+.formulario {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 512px;
+    height: 520px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.login-form {
+    position: absolute;
+    left: 4px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+
+.registro-form {
+    position: absolute;
+    right: -520px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+}
+
+.topo span {
+    color: #fff;
+    font-size: small;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.topo span a {
+    color: #fff;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+header {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0 30px 0;
+}
+
+.coluna-um {
+    gap: 10px;
+}
+
+.campo-entrada {
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 0 10px 0 45px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    width: 500px;
+    height: 45px;
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.input-caixa:hover,
+.input-caixa:focus {
+    transition: 0.3s;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-caixa i {
+    position: relative;
+    top: -32px;
+    left: 15px;
+}
+
+.submit {
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 30px;
+    width: 500px;
+    height: 45px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.7);
+    transition: 0.3s ease-in-out;
+}
+
+.submit:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transition: 0.4s;
+}
+
+.coluna-dois {
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    margin-top: 10px;
+    font-size: small;
+    gap: 200px;
+}
+
+.coluna-dois .primeira {
+    display: flex;
+    gap: 10px;
+}
+
+.segunda label a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.segunda label a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 769px) {
+    .nav-button {
+        display: none;
+    }
+
+    .nav {
+        background: rgba(0, 0, 0, 0.61);
+    }
+
+    .nav-menu.resposivo {
+        top: 100px;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: -900px;
+        display: flex;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.900);
+        backdrop-filter: blur(1000px);
+        transition: 0.3s;
+        width: 100%;
+        height: 90vh;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        position: relative;
+        bottom: -80px;
+    }
+
+    .nav-menu-btn {
+        font-size: 25px;
+        display: block;
+        color: #fff;
+        cursor: pointer;
+
+    }
+
+    .nav-menu-btn i {
+        border-radius: 50%;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .fundo {
+        min-height: 100vh;
+    }
+
+    .formulario {
+        width: 100%;
+        height: 300px;
+    }
+
+    .registro-form, .login-form {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .registro-form input, .login-form input {
+        width: 99%;
+    }
+
+    .formulario {
+        width: 512px;
+        height: 520px;
+    }
+
+    input[type="checkbox"] {
+        transform: scale(0.7);
+    }
+
+
+}

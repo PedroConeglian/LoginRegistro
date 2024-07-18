@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/MyLOGO.png">
+    <title>LOGO.</title>
+</head>
+
+<body>
+    <div class="fundo">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>LOGO.</p>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#" class="link active">Inicio</a></li>
+                    <li><a href="#" class="link">Sobre</a></li>
+                    <li><a href="#" class="link">Serviços</a></li>
+                    <li><a href="#" class="link">Sair</a></li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="btn branco-btn" id="entrarBtn" onclick="entrar()">Entrar</button>
+                <button class="btn" id="registrarBtn" onclick="registrar()">Criar conta</button>
+            </div>
+            <div class="nav-menu-btn">
+                <i class='bx bx-menu' onclick="MenuFuncao()"></i>
+            </div>
+        </nav>
+        <!--------------------------CAIXA-FORMULARIO-------------------------->
+        <div class="formulario">
+
+            <!-----LOGIN----->
+            <div class="login-form" id="entrar">
+                <div class="topo">
+                    <span>Não possui uma conta?<a href="#" onclick="registrar()">Registre-se aqui</a></span>
+                    <header>Entrar</header>
+                </div>
+                <div>
+                    <div class="input-caixa">
+                        <input type="text" class="campo-entrada" placeholder="Usuario ou E-mail">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-caixa">
+                        <input type="password" class="campo-entrada" placeholder="Senha">
+                        <i class="bx bx-lock-alt"></i>
+                    </div>
+                    <div class="input-caixa">
+                        <input type="submit" class="submit" value="Entrar">
+                    </div>
+                    <div class="coluna-dois">
+                        <div class="primeira">
+                            <input type="checkbox" id="login-ok">
+                            <label for="login-ok">Lembre de mim</label>
+                        </div>
+                        <div class="segunda">
+                            <label><a href="#">Esqueçeu a senha?</a></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-----REGISTRO----->
+            <div class="registro-form" id="registrar">
+                <div class="topo">
+                    <span>Ja possui uma conta?<a href="#" onclick="entrar()"> Entre aqui</a></span>
+                    <header>Registrar</header>
+                </div>
+                <div class="coluna-um">
+                    <div class="input-caixa">
+                        <input type="text" class="campo-entrada" placeholder="Primeiro Nome">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-caixa">
+                        <input type="text" class="campo-entrada" placeholder="Ultimo Nome">
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-caixa">
+                        <input type="text" class="campo-entrada" placeholder="E-mail">
+                        <i class="bx bx-envelope"></i>
+                    </div>
+                    <div class="input-caixa">
+                        <input type="password" class="campo-entrada" placeholder="Senha">
+                        <i class="bx bx-lock-alt"></i>
+                    </div>
+                    <div class="input-caixa">
+                        <input type="submit" class="submit" placeholder="Registrar">
+                    </div>
+                    <div class="coluna-dois">
+                        <div class="primeira">
+                            <input type="checkbox" id="registro-ok">
+                            <label for="registro-ok">Lembre de mim</label>
+                        </div>
+                        <div class="segunda">
+                            <label><a href="#">Termo e condições</a></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function MenuFuncao() {
+            var i = document.getElementById('navMenu')
+
+            if (i.className === "nav-menu") {
+                i.className += " resposivo";
+            } else {
+                i.className = "nav-menu";
+            }
+
+        }
+    </script>
+
+    <script>
+        var a = document.getElementById('entrarBtn');
+        var b = document.getElementById('registrarBtn');
+        var x = document.getElementById('entrar');
+        var y = document.getElementById('registrar');
+
+        function entrar() {
+            x.style.left = "4px";
+            y.style.right = "-520px";
+            a.className += " branco-btn";
+            b.className = "btn";
+        }
+
+        function registrar() {
+            x.style.left = "-510px";
+            y.style.right = "5px";
+            a.className = " btn";
+            b.className += " branco-btn";
+        }
+    </script>
+</body>
+
+</html>
